@@ -5,13 +5,14 @@
 #include <opencv2/opencv.hpp>
 using namespace std;
 using namespace cv;
+//change the video sources at the places which are marked ((()))
 int extractRed()
 {
     string vidname;
     cout<<"Enter the video to be Done\n";
     cin>>vidname;
     //open the video file for reading
-    VideoCapture cap("//home//altaf//Video Effect//VDO//"+vidname+".avi");
+    VideoCapture cap("//home//altaf//Video Effect//VDO//"+vidname+".avi");//change the video sources
 
     // if not success, exit program
     if (cap.isOpened() == false)
@@ -27,7 +28,7 @@ int extractRed()
     //Define names of the window
     String window_name_of_original_video = "Original Video";
     String red_converted = "Video with the Extracted red frames";
-    string filename = "//home//altaf//Video Effect//VDO//"+vidname+"_redextract.avi";
+    string filename = "//home//altaf//Video Effect//VDO//"+vidname+"_redextract.avi";//change the video sources
     // Create a window with above namesint fcc = CV_FOURCC('D','I','V','3');
     int fcc = CV_FOURCC('D','I','V','3');
 	int fps = 25;
@@ -82,7 +83,7 @@ int capture()
 	string vidname;
 	cout<<"Enter Video Title\n";
 	cin>>vidname;
-	string filename = "//home//altaf//Video Effect//VDO//"+vidname+".avi";
+	string filename = "//home//altaf//Video Effect//VDO//"+vidname+".avi";//change the video sources
 	int fcc = CV_FOURCC('D','I','V','3');
 	int fps = 25;
 	cv::Size fsize (c.get(CV_CAP_PROP_FRAME_WIDTH),c.get(CV_CAP_PROP_FRAME_HEIGHT));
@@ -119,7 +120,7 @@ void gaussianFilter()
     cout<<"Enter the video to be Done\n";
     cin>>vidname;
     //open the video file for reading
-    VideoCapture cap("//home//altaf//Video Effect//VDO//"+vidname+".avi");
+    VideoCapture cap("//home//altaf//Video Effect//VDO//"+vidname+".avi");//change the video sources
 
     // if not success, exit program
     if (cap.isOpened() == false)
@@ -135,7 +136,7 @@ void gaussianFilter()
     //Define names of the window
     String window_name_of_original_video = "Original Video";
     String window_name_of_video_blurred_with_5x5_kernel = "Video Blurred with 5 x 5 Gaussian Kernel";
-    string filename = "//home//altaf//Video Effect//VDO//"+vidname+"_blurred.avi";
+    string filename = "//home//altaf//Video Effect//VDO//"+vidname+"_blurred.avi";//change the video sources
     // Create a window with above namesint fcc = CV_FOURCC('D','I','V','3');
     int fcc = CV_FOURCC('D','I','V','3');
 	int fps = 25;
@@ -261,7 +262,7 @@ void peep()
 {
     DIR *dir;
     struct  dirent *ent;
-    if ((dir = opendir ("//home//altaf//Video Effect//VDO")) != NULL) 
+    if ((dir = opendir ("//home//altaf//Video Effect//VDO")) != NULL) //change the video sources
     {
         /* print all the files and directories within directory */
         while ((ent = readdir (dir)) != NULL) 
